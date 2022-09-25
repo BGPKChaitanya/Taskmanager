@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import TaskManager from "./components/TaskManager";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// These are the lists used in the application. You can move them to any component needed.
+
+const tagsList = [
+  {
+    optionId: "HEALTH",
+    displayText: "Health",
+  },
+  {
+    optionId: "EDUCATION",
+    displayText: "Education",
+  },
+  {
+    optionId: "ENTERTAINMENT",
+    displayText: "Entertainment",
+  },
+  {
+    optionId: "SPORTS",
+    displayText: "Sports",
+  },
+  {
+    optionId: "TRAVEL",
+    displayText: "Travel",
+  },
+  {
+    optionId: "OTHERS",
+    displayText: "Others",
+  },
+];
+
+// Replace your code here
+const App = () => (
+  <div>
+    <TaskManager list={tagsList} />
+  </div>
+);
 
 export default App;
